@@ -1,0 +1,56 @@
+.main .highlight {
+    color: red;
+}
+
+.main>.highlight {
+    color: blue;
+}
+
+#password_input:invalid {
+    border: yellow solid 3px;
+}
+
+input[type="range"] {
+    width: 50%;
+}
+
+#sect {
+    background-color: rgb(238, 238, 238);
+}
+
+#ProgressRange {
+    width: 10%;
+}
+
+progress[value] {
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    /* Firefox also renders a border */
+    width: 10%;
+    height: 20px;
+}
+
+progress[value]::-moz-progress-bar {
+    background-image:
+        -moz-linear-gradient(135deg,
+            transparent 33%,
+            rgba(0, 0, 0, 0.1) 33%,
+            rgba(0, 0, 0, 0.1) 66%,
+            transparent 66%),
+        -moz-linear-gradient(top,
+            rgba(255, 255, 255, 0.25),
+            rgba(0, 0, 0, 0.25)),
+        -moz-linear-gradient(left,
+            #09c,
+            #f44);
+
+    border-radius: 2px;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
+
+.attention {
+    fill: red;
+    width: 50px;
+    height: 50px;
+}
