@@ -1,9 +1,16 @@
-html {
-    background-color: rgb(255, 255, 255);
+html,
+#main_article {
+    background-color: #36393E;
+    color: white;
+}
+
+a:visited,
+a:link {
+    color: white;
 }
 
 .wrap {
-    background-color: rgb(245, 245, 245);
+    background-color: #414549;
     margin: 10px 25% 0px 25%;
     padding: 5px;
     max-width: 50%;
@@ -11,12 +18,13 @@ html {
     text-align: center;
 }
 
-.wrap:hover {
-    background-color: rgb(228, 228, 228);
+.wrap:hover,
+article:hover {
+    background-color: #474b50;
 }
 
 article {
-    background-color: rgb(245, 245, 245);
+    background-color: #414549;
 }
 
 .main .highlight {
@@ -115,6 +123,7 @@ progress[value]::-moz-progress-bar {
 /* Style the button */
 #expand-btn,
 #expand-bt {
+    color: #36393E;
     display: inline-block;
     padding: 5px 11px;
     background-color: #ff7;
