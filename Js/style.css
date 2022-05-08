@@ -102,7 +102,7 @@ progress[value]::-moz-progress-bar {
 }
 
 /* Show hidden content when the checkbox is checked */
-/* !звёздочка ставится для выбора всех элементов следующих за элементом, НЕ являющимися его детьми напрямую! */
+/* !звёздочка ставится для выбора всех элементов следующих за элементом, НЕ являющимися его родственниками напрямую! */
 /* the * means "not direct child" for " " and ">" and "not a sibling" for "~" and "+" */
 #expand-toggle:checked~* .expandable {
     visibility: visible;
