@@ -4,6 +4,10 @@ html,
     color: white;
 }
 
+button {
+    color: #36393E;
+}
+
 a:visited,
 a:link {
     color: white;
