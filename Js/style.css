@@ -1,3 +1,24 @@
+html {
+    background-color: rgb(255, 255, 255);
+}
+
+.wrap {
+    background-color: rgb(245, 245, 245);
+    margin: 10px 25% 0px 25%;
+    padding: 5px;
+    max-width: 50%;
+    min-height: 50px;
+    text-align: center;
+}
+
+.wrap:hover {
+    background-color: rgb(228, 228, 228);
+}
+
+article {
+    background-color: rgb(245, 245, 245);
+}
+
 .main .highlight {
     color: red;
 }
@@ -26,7 +47,7 @@ input[type="range"] {
 }
 
 #ProgressRange {
-    width: 10%;
+    width: 50%;
 }
 
 progress[value] {
@@ -34,7 +55,7 @@ progress[value] {
     appearance: none;
     border: none;
     /* Firefox also renders a border */
-    width: 10%;
+    width: 50%;
     height: 20px;
 }
 
