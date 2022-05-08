@@ -6,8 +6,14 @@
     color: blue;
 }
 
+#password_input {
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
 #password_input:invalid {
-    border: yellow solid 3px;
+    border: red solid 3px;
 }
 
 input[type="range"] {
