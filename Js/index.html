@@ -273,6 +273,57 @@
                 <li>7</li>
             </ol>
         </div>
+        <div id="css-checked">
+            <div id="hidden-row">
+                <input type="checkbox" id="expand-toggle" />
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Column #1</th>
+                            <th>Column #2</th>
+                            <th>Column #3</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="expandable">
+                            <td>[more text]</td>
+                            <td>[more text]</td>
+                            <td>[more text]</td>
+                        </tr>
+                        <tr>
+                            <td>[cell text]</td>
+                            <td>[cell text]</td>
+                            <td>[cell text]</td>
+                        </tr>
+                        <tr>
+                            <td>[cell text]</td>
+                            <td>[cell text]</td>
+                            <td>[cell text]</td>
+                        </tr>
+                        <tr class="expandable">
+                            <td>[more text]</td>
+                            <td>[more text]</td>
+                            <td>[more text]</td>
+                        </tr>
+                        <tr class="expandable">
+                            <td>[more text]</td>
+                            <td>[more text]</td>
+                            <td>[more text]</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <label for="expand-toggle" id="expand-btn">Toggle hidden rows</label>
+            </div>
+            <div id="css-display">
+                <input type="checkbox" id="expand" />
+                <p id="firstname" class="lav">My name is Donald.</p>
+                <p id="hometown">My name is Mark</p>
+                <p class="lav">I live in Duckburg.</p>
+                <p class="lav">I love men.</p>
+                <label for="expand" id="expand-bt">Toggle hidden rows</label>
+            </div>
+
+        </div>
     </main>
     <script src=" index.js" defer></script>
 </body>
