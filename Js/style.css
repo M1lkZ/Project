@@ -109,13 +109,13 @@ progress[value]::-moz-progress-bar {
     box-shadow: 0 0 0 1px purple;
 }
 
-/* Hide the toggle checkbox */
+
 #expand-toggle,
 #expand {
     display: none;
 }
 
-/* Hide expandable content by default */
+
 .expandable {
     visibility: collapse;
 }
@@ -124,7 +124,7 @@ progress[value]::-moz-progress-bar {
     display: none;
 }
 
-/* Style the button */
+
 #expand-btn,
 #expand-bt {
     color: #36393E;
@@ -135,14 +135,11 @@ progress[value]::-moz-progress-bar {
     border-radius: 3px;
 }
 
-/* Show hidden content when the checkbox is checked */
-/* !звёздочка ставится для выбора всех элементов следующих за элементом ~, НЕ являющимися его родственниками напрямую! */
-/* the * means "not direct child" for " " and ">" and "not a sibling" for "~" and "+" */
 #expand-toggle:checked~* .expandable {
     visibility: visible;
 }
 
-/* Style the button when the checkbox is checked */
+
 #expand-toggle:checked~*#expand-btn,
 #expand:checked~#expand-bt {
     background-color: #ccc;
@@ -155,3 +152,31 @@ progress[value]::-moz-progress-bar {
 #expand:checked~.lav {
     display: block;
 }
+
+#nth-child-ol li:nth-child(-n + 5):hover {
+    background-color: #ccc;
+}
+
+#nth-child-ol li:nth-child(n + 5):hover {
+    background-color: rgb(107, 107, 107);
+}
+
+#nth-child-ol li:nth-child(5n):hover {
+    background-color: rgb(110, 73, 73);
+}
+
+/* Пояснение к * в продвинутых селекторах (" ", > , + , ~)
+!звёздочка ставится для выбора всех элементов следующих за элементом ~, НЕ являющимися его родственниками напрямую!
+ the * means "not direct child" for " " and ">" and "not a sibling" for "~" and "+" 
+ */
+
+/* Пояснение к an+b в :nth-child + even & odd
+a - цикличность (т.е. a = 1 = каждый первый, a = 2 = каждый второй и т.д.)
+b - отступ (важно помнить - он идёт от 0)
+n - какая-то ебанутая константная буква без которой формула не работает (по сути это циклер, без него выберется только 1 элемент)
+(также может быть отрицательной для получения элементов до заданного отступа. пример: -n + 3, где 3 - отступ)
+(также может быть положительной для получения элементов после заданного отступа. пример: n + 3, где 3 - отступ)
+
+even - чётные
+odd - нечётнык
+*/
