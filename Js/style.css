@@ -153,6 +153,11 @@ progress[value]::-moz-progress-bar {
     display: block;
 }
 
+#nth-child-ol li {
+    margin-left: 50%;
+    max-width: fit-content;
+}
+
 #nth-child-ol li:nth-child(-n + 5):hover {
     background-color: #ccc;
 }
@@ -161,7 +166,7 @@ progress[value]::-moz-progress-bar {
     background-color: rgb(107, 107, 107);
 }
 
-#nth-child-ol li:nth-child(5n):hover {
+#nth-child-ol li:nth-child(3n):hover {
     background-color: rgb(110, 73, 73);
 }
 
