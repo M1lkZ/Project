@@ -156,6 +156,7 @@ progress[value]::-moz-progress-bar {
 #nth-child-ol li {
     margin-left: 50%;
     max-width: fit-content;
+    cursor: default;
 }
 
 #nth-child-ol li:nth-child(-n + 5):hover {
