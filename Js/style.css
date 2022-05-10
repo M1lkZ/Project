@@ -4,6 +4,10 @@ html,
     color: white;
 }
 
+* {
+    transition: all .4s, height 1ms;
+}
+
 button {
     color: #36393E;
 }
@@ -24,6 +28,9 @@ a:link {
 
 .wrap:hover,
 article:hover {
+    margin: 10px 23% 0px 23%;
+    padding: 2% 5px;
+    max-width: 54%;
     background-color: #474b50;
 }
 
