@@ -4,6 +4,31 @@ html,
     color: white;
 }
 
+#sidebar_button {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    padding: 15px;
+    background-color: #111213;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 20%;
+    background: #414549;
+    margin-right: -40%;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+}
+
+#sidebarShown:checked~#sidebar {
+    margin-right: 0;
+}
+
 * {
     transition: all .4s, height 1ms;
 }
