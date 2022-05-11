@@ -1,5 +1,17 @@
-let cubeOne = document.querySelector('#cube'),
-    r1 = document.querySelector('#red1'),
+window.onload = function () {
+    const allCubes = document.querySelectorAll('div[id *= cube]');
+    const allRanges = document.querySelectorAll('input[type=range]');
+    const cubes = Array.from(allCubes);
+    const ranges = Array.from(allRanges);
+    for (let i = 0; i < 9; i++) {
+        if (i <= 2) {
+            cubes[i].style.backgroundColor = "#000";
+        }
+        ranges[i].value = "0";
+    }
+}
+
+let r1 = document.querySelector('#red1'),
     g1 = document.querySelector('#green1'),
     b1 = document.querySelector('#blue1'),
     r2 = document.querySelector('#red2'),
