@@ -1,0 +1,49 @@
+body {
+    background-color: #36393E;
+    color: white;
+    padding: 5%;
+}
+
+label {
+    display: inline-block;
+    min-width: 3%;
+}
+
+input[type="range"] {
+    width: 25%;
+}
+
+.range {
+    display: block;
+}
+
+[id*="palet"] {
+    margin: 5%;
+}
+
+[id*="cube"] {
+    position: absolute;
+    top: 20%;
+    right: 60%;
+    left: 40%;
+    border: 1px solid white;
+    width: 100px;
+    height: 100px;
+}
+
+#cubeTwo {
+    top: 37%;
+}
+
+#cubeThree {
+    top: 55%;
+}
+
+#cubeFour {
+    border: 3px solid white;
+    width: 200px;
+    height: 200px;
+    top: 33%;
+    right: 30%;
+    left: 70%;
+}
