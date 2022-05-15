@@ -1,6 +1,11 @@
-html,
-#main_article {
+html {
     background-color: #36393E;
+    /* background: linear-gradient(to right bottom, red, purple); */
+    /* background: radial-gradient(circle farthest-corner at top left, red, blue); */
+    /* background: repeating-radial-gradient(circle, red 20%, purple 70%); */
+    /* background: repeating-linear-gradient(yellow, green); */
+    /* background: url('https://images.unsplash.com/photo-1537568207363-f42db2b1f9e0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80') no-repeat fixed; */
+    background-size: 100%;
     color: white;
 }
 
