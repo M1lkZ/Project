@@ -69,6 +69,21 @@ article:hover {
     background-color: #474b50;
 }
 
+/* two ways to center content inside a div */
+
+/* #datalists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+#datalists>input {
+    position: relative;
+    transform: translateY(50%);
+}
+
+/* end here */
+
 article {
     background-color: #414549;
 }
