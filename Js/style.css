@@ -64,7 +64,7 @@ a:link {
 .wrap:hover,
 article:hover {
     margin: 10px 23% 0px 23%;
-    padding: 2% 5px;
+    padding: 1.5% 1%;
     max-width: 54%;
     background-color: #474b50;
 }
