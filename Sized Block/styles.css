@@ -1,0 +1,28 @@
+body,
+html {
+    display: grid;
+    height: 100%;
+    background-color: #333;
+}
+
+* {
+    transition: all .4s;
+    margin: 0;
+}
+
+#block {
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    min-width: 10%;
+    min-height: 100px;
+    width: 100px;
+    height: auto;
+    margin: 0;
+    background-color: rgb(27, 27, 27);
+}
+
+#range {
+    max-width: 80%;
+    margin: auto;
+}
