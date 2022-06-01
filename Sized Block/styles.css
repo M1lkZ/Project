@@ -6,7 +6,7 @@ html {
 }
 
 * {
-    transition: all .4s;
+    transition: all .1s;
     margin: 0;
 }
 
