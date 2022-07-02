@@ -43,3 +43,28 @@ ProgressRange.oninput = function () {
     let textplace = document.getElementById("progress")
     textplace.value = val
 }
+
+let flexSort = document.getElementById("flex-sort")
+let flag = 1
+
+flexSort.onclick = function () {
+    const allFlexItems = document.querySelectorAll('div[class *= flex-item]');
+    const flexItems = Array.from(allFlexItems);
+    flexItems.sort(function (a, b) {
+        return parseInt(window.getComputedStyle(b).getPropertyValue('height')) - parseInt(window.getComputedStyle(a).getPropertyValue('height'));
+    });
+    if (flag == 1) {
+        for (let i = 1; i < 13; i++) {
+            flexItems[i].style.order = i;
+        }
+        flexSort.innerText = 'Unsort flex containers';
+        flag = 0;
+    } else {
+        for (let i = 1; i < 13; i++) {
+            flexItems[i].style.order = "";
+        }
+        flexSort.innerText = 'Sort flex containers';
+        flag = 1;
+    }
+
+}

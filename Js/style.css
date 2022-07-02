@@ -1,4 +1,5 @@
 html {
+    font-family: "Comic Sans MS", cursive, sans-serif;
     background-color: #36393E;
     /* background: linear-gradient(to right bottom, red, purple); */
     /* background: radial-gradient(circle farthest-corner at top left, red, blue); */
@@ -230,6 +231,42 @@ progress[value]::-moz-progress-bar {
 #nth-child-ol li:nth-child(3n):hover {
     background-color: rgb(110, 73, 73);
 }
+
+#flex-container {
+    overflow: auto;
+    height: 700px;
+    flex-wrap: wrap;
+    /* flex-flow: row wrap; */
+    background-color: darkgreen;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    /* flex-basis: 15%; */
+}
+
+.flex-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 15%;
+    /* width: 15%; */
+    min-height: 100px;
+    margin: 1%;
+    border: black solid 4px;
+    color: black;
+    background-color: palevioletred;
+}
+
+#flex-sort {
+    width: 100px;
+    height: 50px;
+}
+
+/* 
+align-items - групприует элементы из флекс контейнера относительно друг друга
+align-content - относительно контейнера
+*/
 
 /* Пояснение к * в продвинутых селекторах (" ", > , + , ~)
 !звёздочка ставится для выбора всех элементов следующих за элементом ~, НЕ являющимися его родственниками напрямую!
