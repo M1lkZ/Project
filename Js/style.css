@@ -245,6 +245,11 @@ progress[value]::-moz-progress-bar {
     /* flex-basis: 15%; */
 }
 
+/* 
+align-items - групприует элементы из флекс контейнера относительно друг друга
+align-content - относительно контейнера
+*/
+
 .flex-item {
     display: flex;
     justify-content: center;
@@ -263,10 +268,16 @@ progress[value]::-moz-progress-bar {
     height: 50px;
 }
 
-/* 
-align-items - групприует элементы из флекс контейнера относительно друг друга
-align-content - относительно контейнера
-*/
+#opacity {
+    background-color: rgb(65, 3, 3);
+    padding: 0;
+}
+
+#opacity>img {
+    vertical-align: top;
+    margin: 0;
+    opacity: 0.7;
+}
 
 /* Пояснение к * в продвинутых селекторах (" ", > , + , ~)
 !звёздочка ставится для выбора всех элементов следующих за элементом ~, НЕ являющимися его родственниками напрямую!
