@@ -54,13 +54,13 @@ flexSort.onclick = function () {
         return parseInt(window.getComputedStyle(b).getPropertyValue('height')) - parseInt(window.getComputedStyle(a).getPropertyValue('height'));
     });
     if (flag == 1) {
-        for (let i = 1; i < 13; i++) {
+        for (let i = 1; i < flexItems.length + 1; i++) {
             flexItems[i].style.order = i;
         }
         flexSort.innerText = 'Unsort flex containers';
         flag = 0;
     } else {
-        for (let i = 1; i < 13; i++) {
+        for (let i = 1; i < flexItems.length + 1; i++) {
             flexItems[i].style.order = "";
         }
         flexSort.innerText = 'Sort flex containers';
