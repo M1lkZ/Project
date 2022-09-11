@@ -70,3 +70,17 @@ flexSort.onclick = function () {
     flag = 1;
   }
 };
+
+const HoverToggle = document.getElementById("toggle-hover");
+const allWrapDivs = document.querySelectorAll("div[class *= wrap]");
+const WrapDivs = Array.from(allWrapDivs);
+
+HoverToggle.onclick = function () {
+  for (let i = 0; i < WrapDivs.length; i++) {
+    if (WrapDivs[i].classList.contains("non-hover")) {
+      WrapDivs[i].classList.remove("non-hover");
+    } else {
+      WrapDivs[i].classList.add("non-hover");
+    }
+  }
+};
