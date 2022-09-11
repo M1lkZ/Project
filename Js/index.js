@@ -1,3 +1,10 @@
+window.onload = function () {
+  allCheckboxes = document.querySelectorAll("input[type=checkbox]");
+  for (let i = 0; i < allCheckboxes.length; i++) {
+    allCheckboxes[i].checked = false;
+  }
+};
+
 range1.oninput = function () {
   let val = document.getElementById("range1").value;
   let textplace = document.getElementById("textplace1");
