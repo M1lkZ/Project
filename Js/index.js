@@ -87,11 +87,11 @@ hoverToggle.onclick = function () {
 
 const gridCell = Array.from(document.querySelectorAll("div[class *= grid-cell]"));
 for (let i = 0; i < gridCell.length; i++) {
-  gridCell[i].onmouseover = function () {
+  gridCell[i].addEventListener("mouseover", function () {
     let color =
       parseInt(Math.floor(Math.random() * (255 - 0) + 0), 10).toString(16) +
       parseInt(Math.floor(Math.random() * (255 - 0) + 0), 10).toString(16) +
       parseInt(Math.floor(Math.random() * (255 - 0) + 0), 10).toString(16);
-    gridCell[i].style.backgroundColor = "#" + color;
-  };
+    gridCell[i].style.background = "#" + color;
+  });
 }
