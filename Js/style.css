@@ -45,6 +45,8 @@ input[type="range"] {
 
 /* sidebar start */
 #sidebar_button {
+  text-align: center;
+  width: 7vw;
   position: fixed;
   left: 20px;
   top: 20px;
@@ -345,6 +347,8 @@ align-content - относительно контейнера
 }
 
 #toggle-hover-label {
+  text-align: center;
+  width: 7vw;
   position: fixed;
   left: 20px;
   top: 80px;
