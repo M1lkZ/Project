@@ -338,9 +338,6 @@ align-content - относительно контейнера
   color: #1f2122;
   height: 100%;
 }
-.grid-cell:hover {
-  background: rgb(191, 204, 154);
-}
 /* grid end */
 
 /* hover toggle start */

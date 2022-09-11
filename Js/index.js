@@ -71,16 +71,27 @@ flexSort.onclick = function () {
   }
 };
 
-const HoverToggle = document.getElementById("toggle-hover");
+const hoverToggle = document.getElementById("toggle-hover");
 const allWrapDivs = document.querySelectorAll("div[class *= wrap]");
-const WrapDivs = Array.from(allWrapDivs);
+const wrapDivs = Array.from(allWrapDivs);
 
-HoverToggle.onclick = function () {
-  for (let i = 0; i < WrapDivs.length; i++) {
-    if (WrapDivs[i].classList.contains("non-hover")) {
-      WrapDivs[i].classList.remove("non-hover");
+hoverToggle.onclick = function () {
+  for (let i = 0; i < wrapDivs.length; i++) {
+    if (wrapDivs[i].classList.contains("non-hover")) {
+      wrapDivs[i].classList.remove("non-hover");
     } else {
-      WrapDivs[i].classList.add("non-hover");
+      wrapDivs[i].classList.add("non-hover");
     }
   }
 };
+
+const gridCell = Array.from(document.querySelectorAll("div[class *= grid-cell]"));
+for (let i = 0; i < gridCell.length; i++) {
+  gridCell[i].onmouseover = function () {
+    let color =
+      parseInt(Math.floor(Math.random() * (255 - 0) + 0), 10).toString(16) +
+      parseInt(Math.floor(Math.random() * (255 - 0) + 0), 10).toString(16) +
+      parseInt(Math.floor(Math.random() * (255 - 0) + 0), 10).toString(16);
+    gridCell[i].style.backgroundColor = "#" + color;
+  };
+}
