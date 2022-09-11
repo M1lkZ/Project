@@ -1,3 +1,4 @@
+/* overall tweaks start */
 html {
   font-family: "Comic Sans MS", cursive, sans-serif;
   background-color: #36393e;
@@ -11,6 +12,37 @@ html {
   /* background-attachment: local; */
 }
 
+* {
+  transition: all 0.4s, height 1ms;
+}
+
+button {
+  color: #36393e;
+}
+
+a:visited,
+a:link {
+  color: white;
+}
+
+input[type="range"] {
+  width: 50%;
+}
+/* overall tweaks end */
+
+/* selection expand start */
+#red:checked + label,
+#green:checked + label {
+  font-size: 1.5em;
+}
+
+#red:checked,
+#green:checked {
+  box-shadow: 0 0 0 1px purple;
+}
+/* selection expand end */
+
+/* sidebar start */
 #sidebar_button {
   position: fixed;
   left: 20px;
@@ -39,20 +71,9 @@ html {
 #sidebarShown:checked ~ #sidebar {
   margin-right: 0;
 }
+/* sidebar end */
 
-* {
-  transition: all 0.4s, height 1ms;
-}
-
-button {
-  color: #36393e;
-}
-
-a:visited,
-a:link {
-  color: white;
-}
-
+/* main content setup start */
 .wrap {
   background-color: #414549;
   margin: 10px 25% 0px 25%;
@@ -88,9 +109,18 @@ article:hover {
 
 /* end here */
 
+/* unused article setup 
 article {
   background-color: #414549;
-}
+} */
+/* main content setup end */
+
+/* selectors start */
+
+/* Пояснение к * в продвинутых селекторах (" ", > , + , ~)
+!звёздочка ставится для выбора всех элементов следующих за элементом ~, НЕ являющимися его родственниками напрямую!
+ the * means "not direct child" for " " and ">" and "not a sibling" for "~" and "+" 
+ */
 
 .main .highlight {
   color: red;
@@ -99,7 +129,9 @@ article {
 .main > .highlight {
   color: blue;
 }
+/* selectors end */
 
+/* password input start */
 #password_input {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -110,15 +142,9 @@ article {
 #password_input:invalid {
   border: red solid 3px;
 }
+/* password input end */
 
-input[type="range"] {
-  width: 50%;
-}
-
-#sect {
-  background-color: rgb(238, 238, 238);
-}
-
+/* progress start */
 #ProgressRange {
   width: 50%;
 }
@@ -146,27 +172,17 @@ progress[value]::-moz-progress-bar {
   border-radius: 2px;
   background-size: 35px 20px, 100% 100%, 100% 100%;
 }
+/* progress end */
 
+/* svg start */
 .attention {
   fill: red;
   width: 50px;
   height: 50px;
 }
+/* svg end */
 
-#list li {
-  list-style: disc;
-}
-
-#red:checked + label,
-#green:checked + label {
-  font-size: 1.5em;
-}
-
-#red:checked,
-#green:checked {
-  box-shadow: 0 0 0 1px purple;
-}
-
+/* expand start */
 #expand-toggle,
 #expand {
   display: none;
@@ -206,6 +222,24 @@ progress[value]::-moz-progress-bar {
 #expand:checked ~ .lav {
   display: block;
 }
+/* expand end */
+
+/* colored on-hover li start */
+
+/* Пояснение к an+b в :nth-child + even & odd
+a - цикличность (т.е. a = 1 = каждый первый, a = 2 = каждый второй и т.д.)
+b - отступ (важно помнить - он идёт от 0)
+n - какая-то ебанутая константная буква без которой формула не работает (по сути это циклер, без него выберется только 1 элемент)
+(также может быть отрицательной для получения элементов до заданного отступа. пример: -n + 3, где 3 - отступ)
+(также может быть положительной для получения элементов после заданного отступа. пример: n + 3, где 3 - отступ)
+
+even - чётные
+odd - нечётные
+*/
+
+#list li {
+  list-style: disc;
+}
 
 #nth-child-ol li {
   margin-left: 50%;
@@ -224,18 +258,20 @@ progress[value]::-moz-progress-bar {
 #nth-child-ol li:nth-child(3n):hover {
   background-color: rgb(110, 73, 73);
 }
+/* colored on-hover li end */
 
+/* flex-sort start */
 #flex-container {
   overflow: auto;
   height: 700px;
   flex-wrap: wrap;
-  /* flex-flow: row wrap; */
+  /* flex-flow: row wrap; - specifies the direction of a flex container, as well as its wrapping behavior*/
   background-color: darkgreen;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
-  /* flex-basis: 15%; */
+  /* flex-basis: 15%; - specifies the initial length of a flexible item. */
 }
 
 /* 
@@ -260,6 +296,9 @@ align-content - относительно контейнера
   width: 100px;
   height: 50px;
 }
+/* flex-sort end */
+
+/* opacity start */
 
 #opacity {
   background-color: rgb(65, 3, 3);
@@ -271,19 +310,4 @@ align-content - относительно контейнера
   margin: 0;
   opacity: 0.7;
 }
-
-/* Пояснение к * в продвинутых селекторах (" ", > , + , ~)
-!звёздочка ставится для выбора всех элементов следующих за элементом ~, НЕ являющимися его родственниками напрямую!
- the * means "not direct child" for " " and ">" and "not a sibling" for "~" and "+" 
- */
-
-/* Пояснение к an+b в :nth-child + even & odd
-a - цикличность (т.е. a = 1 = каждый первый, a = 2 = каждый второй и т.д.)
-b - отступ (важно помнить - он идёт от 0)
-n - какая-то ебанутая константная буква без которой формула не работает (по сути это циклер, без него выберется только 1 элемент)
-(также может быть отрицательной для получения элементов до заданного отступа. пример: -n + 3, где 3 - отступ)
-(также может быть положительной для получения элементов после заданного отступа. пример: n + 3, где 3 - отступ)
-
-even - чётные
-odd - нечётные
-*/
+/* opacity end */
