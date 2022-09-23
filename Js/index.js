@@ -102,3 +102,10 @@ for (let i = 0; i < gridCell.length; i++) {
     gridCell[i].style.background = "#" + color;
   });
 }
+
+const highFiveButton = document.getElementById("high-five-button");
+const highFiveContainer = document.getElementById("high-five");
+
+highFiveButton.onclick = function() {
+  highFiveContainer.style.visibility = "hidden";
+}

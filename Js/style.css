@@ -14,7 +14,7 @@ html {
 }
 
 * {
-  transition: all 0.4s, height 1ms;
+  transition: all 0.4s;
 }
 
 button {
@@ -306,6 +306,11 @@ align-content - относительно контейнера
 #opacity {
   background-color: rgb(65, 3, 3);
   padding: 0;
+  transition: all 0.4s,opacity 0.3s;
+}
+
+#opacity:hover > img{
+  opacity: 0.3;
 }
 
 #opacity > img {
@@ -361,3 +366,72 @@ align-content - относительно контейнера
   color: #111213;
 }
 /* hover toggle end */
+
+/* high five start */
+#high-five{
+  background: rgba(0,0,0,0);
+  position: fixed;
+  top: 5vh;
+  right: 5vw;
+  width: 15vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 0.5fr;
+  justify-content: center;
+  align-items: center;
+}
+
+#high-five > img{
+  height: auto;
+  width: 50%;
+  transform-origin: bottom;
+  animation: shaking-hand 1s infinite ease-in-out, jump 1.5s infinite linear;
+  margin: auto;
+}
+
+@keyframes shaking-hand{
+  0% {rotate: -25deg;}
+  50% {rotate: 25deg;}
+  100% {rotate: -25deg;}
+}
+
+@keyframes jump{
+  0%{transform: translateY(0px);}
+  50%{transform: translateY(-40px);}
+  65%{transform: translateY(-10px);}
+  85%{transform: translateY(-30px);}
+  100%{transform: translateY(0px);}
+}
+
+#high-five-button-label{
+  margin: auto;
+  background: rgb(196, 176, 176);
+  border-radius: 20%/100%;
+  border: rgb(196, 176, 176) solid 5px;
+  color: black;
+  animation: show-up 10s linear, shaking-label 1s infinite ease-in-out 14s;
+}
+
+@keyframes show-up{
+  0% {
+    opacity: 0;
+    transform:translateY(-100px);
+  }
+  90%{opacity: 0;}
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes shaking-label {
+    33%{
+      rotate: -10deg;
+      scale: 108%;
+    }
+    66%{
+      rotate: 10deg;
+      scale: 108%;
+    }
+}
