@@ -104,8 +104,14 @@ for (let i = 0; i < gridCell.length; i++) {
 }
 
 const highFiveButton = document.getElementById("high-five-button");
-const highFiveContainer = document.getElementById("high-five");
+const highFiveButtonLabel = document.getElementById("high-five-button-label");
+const highFiveHand = document.getElementById("high-five-img");
 
 highFiveButton.onclick = function() {
-  highFiveContainer.style.visibility = "hidden";
+  highFiveButtonLabel.style.animation = "label-closing 1s ease-in-out";
+  highFiveHand.style.animation = "shaking-hand 1s infinite ease-in-out, jump 1.5s infinite linear, hand-closing 1s";
+  highFiveButtonLabel.style.background = "yellow";
+  highFiveButtonLabel.style.borderColor = "yellow";
+  highFiveButtonLabel.style.visibility = "hidden";
+  highFiveHand.style.visibility = "hidden";
 }

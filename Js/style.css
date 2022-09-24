@@ -382,7 +382,7 @@ align-content - относительно контейнера
   align-items: center;
 }
 
-#high-five > img{
+#high-five-img{
   height: auto;
   width: 50%;
   transform-origin: bottom;
@@ -434,4 +434,30 @@ align-content - относительно контейнера
       rotate: 10deg;
       scale: 108%;
     }
+}
+
+@keyframes label-closing {
+  0%{
+    visibility: visible;
+  }
+  33%{
+    rotate: -10deg;
+    scale: 115%;
+  }
+  66%{
+    rotate: 10deg;
+    scale: 115%;
+  }
+  100%{
+    visibility: hidden;
+  }
+}
+
+@keyframes hand-closing {
+  0%{
+    visibility: visible;
+  }
+  100%{
+    visibility: hidden;
+  }
 }
